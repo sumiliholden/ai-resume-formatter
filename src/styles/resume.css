@@ -1,0 +1,163 @@
+/* Branded resume styles — replicates the company template (test.docx) */
+.resume-page {
+  width: 8.5in;
+  min-height: 11in;
+  background: #fff;
+  margin: 0 auto;
+  padding: 0.5in 0.75in 0.5in 0.85in;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 9.5pt;
+  color: #676767;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: grid;
+  grid-template-columns: 2.05in 1fr;
+  column-gap: 0.25in;
+}
+
+/* Decorative top-left green circle */
+.resume-page::before {
+  content: '';
+  position: absolute;
+  top: -0.45in;
+  left: -0.45in;
+  width: 1.4in;
+  height: 1.4in;
+  background: #95B541;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.resume-sidebar { position: relative; z-index: 1; padding-top: 1in; }
+.resume-main { position: relative; z-index: 1; padding-top: 0.1in; }
+
+/* Sidebar headers */
+.resume-sidebar h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 9pt;
+  color: #676767;
+  margin: 16px 0 6px;
+  letter-spacing: -0.2px;
+}
+
+.resume-sidebar p,
+.resume-sidebar .sb-body {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: #676767;
+  line-height: 1.55;
+  margin: 4px 0;
+}
+
+.resume-sidebar .sb-body { font-weight: 400; }
+
+.sb-edu-school {
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: #676767;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+.sb-edu-degree {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 8.5pt;
+  color: #676767;
+  margin: 2px 0 0;
+}
+
+.sb-specialties {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: #676767;
+  line-height: 1.55;
+  margin: 6px 0;
+}
+
+/* Main column — name and title */
+.resume-main .person-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26pt;
+  font-weight: 700;
+  color: #221F1F;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0;
+}
+
+.resume-main .job-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  color: #95B541;
+  margin: 6px 0 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.resume-main .top-cert {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  color: #95B541;
+  margin: 4px 0 0;
+}
+
+/* Section headers in main column */
+.resume-main h2.section-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #95B541;
+  margin: 22px 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.cert-line {
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: #666766;
+  margin: 6px 0;
+}
+
+/* Experience entries */
+.exp-block { margin-top: 10px; }
+.exp-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+  color: #221F1F;
+  margin: 10px 0 2px;
+  letter-spacing: -0.2px;
+}
+.exp-meta {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 8.5pt;
+  color: #676767;
+  margin: 2px 0 4px;
+}
+.exp-paragraph {
+  font-size: 8.5pt;
+  color: #676767;
+  line-height: 1.55;
+  margin: 4px 0;
+}
+.exp-bullets {
+  margin: 4px 0 4px 14px;
+  padding: 0;
+  font-size: 8.5pt;
+  color: #676767;
+  line-height: 1.55;
+}
+.exp-bullets li { margin-bottom: 3px; }
+
+/* Print rules */
+@media print {
+  .resume-page {
+    box-shadow: none;
+    margin: 0;
+    width: 8.5in;
+  }
+}
