@@ -30,9 +30,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_AI_PROVIDER: ${{ secrets.VITE_AI_PROVIDER }}
+          VITE_AI_PROVIDER: ${{ vars.VITE_AI_PROVIDER }}
           VITE_GROQ_API_KEY: ${{ secrets.VITE_GROQ_API_KEY }}
-          VITE_GROQ_MODEL: ${{ secrets.VITE_GROQ_MODEL }}
+          VITE_GROQ_MODEL: ${{ vars.VITE_GROQ_MODEL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
